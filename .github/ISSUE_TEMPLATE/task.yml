@@ -1,0 +1,58 @@
+name: 📋 Nuovo Task
+description: Crea un task con stima ore e settimana
+title: "[TASK] "
+labels: ["task"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Crea un nuovo task
+        Compila i campi per creare un task con tutte le informazioni necessarie.
+
+  - type: input
+    id: estimate
+    attributes:
+      label: ⏱️ Stima ore
+      description: Quante ore pensi serviranno?
+      placeholder: "8"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: week
+    attributes:
+      label: 📅 Settimana
+      description: In quale settimana va completato?
+      options:
+        - W40
+        - W41
+        - W42
+        - W43
+        - W44
+        - W45
+        - W46
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🎯 Priorità
+      options:
+        - 🔴 Alta
+        - 🟡 Media
+        - 🟢 Bassa
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 Descrizione
+      description: Descrivi cosa va fatto
+      placeholder: |
+        Cosa va fatto?
+        Perché è importante?
+    validations:
+      required: true
